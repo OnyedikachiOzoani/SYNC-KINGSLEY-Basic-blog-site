@@ -1,0 +1,340 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:wght@700&family=Merriweather:wght@900&family=Roboto:ital,wght@0,500;1,500&family=Ubuntu:wght@300;400;700&display=swap");
+body {
+	font-family: "Libre Baskerville", serif;
+	margin: 0;
+}
+
+.site-header {
+	background: #24053e;
+	padding: 1em 0;
+	border-radius: 0 0 30% 10%;
+	position: relative;
+	margin: 0 0 3em 0;
+}
+
+img {
+	width: 100%;
+}
+
+/* Layout */
+
+.container {
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.site-header .container {
+	height: 15em;
+	max-width: none;
+}
+
+.site-logo-image-container {
+	position: absolute;
+	top: 62%;
+	right: 5%;
+	line-height: 0;
+	z-index: 100;
+}
+
+.site-logo-image {
+	width: 10em;
+	height: 10em;
+	border-radius: 50%;
+	border: 0.3em solid white;
+}
+
+.site-title-container {
+	line-height: 0.8;
+}
+
+.article-featured:first-child,
+.article-recent:nth-child(2) {
+	margin: 0 0 1.2em 0;
+}
+
+.article-featured:last-child,
+.recent-tiktok-posts .article-recent:last-child {
+	height: fit-content;
+	padding-bottom: 25%;
+	border-bottom: 2px solid #24053e;
+}
+
+.article-featured,
+.article-recent,
+.widget-recent-post {
+	display: flex;
+	flex-direction: column;
+	margin: 1.2em 0;
+	/* background: linear-gradient(#24053e 80%, #2f46e0); */
+}
+
+.article-featured-main,
+.article-recent-main,
+.article-featured-secondary,
+.article-recent-secondary,
+.widget-recent-post {
+	padding: 1em;
+}
+
+.article-featured-main,
+.article-recent-main,
+.widget-recent-post-title {
+	order: 1;
+	background: linear-gradient(#24053e 20%, #2f46e0);
+}
+
+.article-featured-secondary,
+.article-recent-secondary,
+.widget-recent-post .article-see-more {
+	order: 0;
+	background-color: #24053e;
+}
+
+.article-image-container,
+.video-content-image,
+.widget-recent-post .article-see-more {
+	position: relative; /* this makes the container a reference point for the child elements */
+	width: 100%;
+}
+
+.article-image-container,
+.widget-recent-post .article-see-more {
+	padding-bottom: calc(400% / 3); /* Set the height to 4/3 of the width */
+}
+
+.video-content-image {
+	width: 100%; /* Set the width to 100% of the parent container */
+	padding-bottom: 75%; /* Set the height to 3/4 of the width */
+}
+
+.article-image,
+.widget-image,
+.video-content-image .widget-image {
+	width: 100%; /* this makes the image fill the container width */
+	height: 100%; /*  this makes the image fill the container height */
+	object-fit: cover; /* this makes the image cover the container without stretching  */
+	position: absolute; /* Set the position to absolute */
+	top: 0; /* Align the image to the top of the container */
+	left: 0; /* Align the image to the left of the container */
+}
+
+.video-play-icon {
+	position: absolute; /* this allows the image to be positioned over the other image */
+	top: 50%; /* this moves the image 50% from the top edge of the container */
+	left: 50%; /* this moves the image 50% from the left edge of the container */
+	transform: translate(
+		-50%,
+		-50%
+	); /* this offsets the image by half of its own width and height, so that it is centered */
+	/* margin: 0 auto; this centers the image horizontally */
+	width: 20%;
+	border-radius: 50%;
+	background-color: hsla(80, 2%, 72%, 0.5);
+}
+
+.widget-recent-post {
+	background: linear-gradient(#24053e 85%, #2f46e0);
+}
+
+.widget-recent-post .article-see-more {
+	display: block;
+}
+
+.tiktok-widgets .article-see-more {
+	padding-bottom: 0;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar-widget {
+	font-size: 5vw;
+	margin: auto;
+	width: 65%;
+}
+
+@media (min-width: 400px) {
+	/* Layout */
+	.sidebar {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	.sidebar-widget {
+		width: auto;
+		flex-grow: 1;
+		margin-top: 0;
+	}
+
+	.facebook-widgets {
+		margin-right: 5%;
+	}
+
+	.tiktok-widgets {
+		margin-left: 5%;
+	}
+
+	.widget-recent-post {
+		padding: 0.5em;
+	}
+
+	/* Typography */
+
+	.sidebar-widget .widget-title {
+		font-size: 0.7em;
+		margin: 2em auto 0.3em auto;
+	}
+}
+
+/* Typograpghy */
+@font-face {
+	font-family: "minehead";
+	src: url(/fonts/minehead/MineheadDEMO.otf);
+}
+
+.site-title {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: bolder;
+	font-size: 3em;
+	color: white;
+	margin: 0;
+}
+
+.subtitle {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 700;
+	margin-top: 0;
+	color: #2f46e0;
+}
+
+.article-caption,
+.widget-recent-post-title {
+	color: white;
+	font-family: "Merriweather", serif;
+	font-weight: 900;
+	margin: 0 0 0.1em 0;
+}
+
+.article-caption + .article-see-more {
+	font-size: 0.75em;
+	text-decoration: none;
+}
+
+.article-caption + .article-see-more,
+.widget-title {
+	background-color: #43ffa1;
+	border: 0.3em solid #43ffa1;
+	border-radius: 0.5em;
+}
+
+.article-section-heading,
+.widget-title {
+	color: #24053e;
+	font-family: "Bebas Neue", sans-serif;
+	letter-spacing: 0.05em;
+	margin: 20% 0 0.3em 0;
+}
+
+.article-info {
+	margin: 0.5em 0 0.5em 0;
+	color: white;
+	font-size: 0.7em;
+}
+
+.widget-recent-post-title {
+	font-size: 0.75em;
+	margin: 0;
+	background: none;
+}
+
+.widget-title {
+	width: fit-content;
+	padding: 0;
+	margin: 20% auto 0.3em auto;
+	font-size: 1em;
+	text-align: center;
+}
+
+.widget-title .article-see-more {
+	text-decoration: none;
+	color: #24053e;
+}
+
+/* Site Navigation */
+
+.nav-list ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.nav-list-item {
+	padding: 0.3em;
+	list-style: none;
+	margin: 0.2em 0;
+}
+
+.nav-link {
+	text-decoration: none;
+	font-family: "Ubuntu", sans-serif;
+	font-weight: bolder;
+	font-size: 1.125em;
+	color: #0096ff;
+	border-bottom: 0.08em solid #43ffa1;
+}
+
+.nav-link:hover {
+	color: #43ffa1;
+	text-decoration: underline;
+}
+
+.nav-link:focus {
+	color: #e90343;
+}
+
+.site-title-container a {
+	text-decoration: none;
+}
+
+.current-page,
+.current-page:hover,
+.current-page:focus,
+.site-title-container a .site-title:hover,
+.site-title-container a .site-title:focus,
+.external-link {
+	color: #43ffa1;
+	text-decoration: none;
+}
+
+@media (min-width: 600px) {
+	.nav-list {
+		margin-top: 2em;
+	}
+
+	.nav-list ul {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
+@media (min-width: 700px) {
+	.container-flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav-list {
+		margin: auto;
+	}
+
+	.nav-list-item {
+		margin: 0 1em;
+	}
+}
