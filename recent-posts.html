@@ -13,7 +13,7 @@
 		<title>Sync Kingsley's Blog</title>
 	</head>
 	<body>
-		<header class="site-header">
+		<header class="site-header recent-posts-header">
 			<div class="container container-flex">
 				<div class="site-logo">
 					<div class="site-logo-image-container">
@@ -32,15 +32,15 @@
 				<nav class="nav-list">
 					<ul>
 						<li class="nav-list-item">
-							<a href="index.html" class="nav-link current-page"
-								>home</a
-							>
+							<a href="index.html" class="nav-link">home</a>
 						</li>
 						<li class="nav-list-item">
 							<a href="#" class="nav-link">about me</a>
 						</li>
 						<li class="nav-list-item">
-							<a href="recent-posts.html" class="nav-link"
+							<a
+								href="recent-posts.html"
+								class="nav-link current-page"
 								>recent posts</a
 							>
 						</li>
@@ -50,60 +50,12 @@
 		</header>
 
 		<div class="container container-flex">
-			<main role="main">
-				<section class="featured-articles">
-					<!-- Facebook featured -->
-					<article class="article-featured facebook-featured">
-						<div class="article-featured-main">
-							<h2 class="article-caption"
-								>Top action movies coming out in 2024</h2
-							>
-							<a href="#" class="article-see-more">see more</a>
-						</div>
-						<div class="article-featured-secondary">
-							<a href="#" class="article-see-more">
-								<div class="article-image-container">
-									<img
-										src="images/top-action-movies.png"
-										alt="image of top coming action movies in 2024"
-										class="article-image" />
-								</div>
-							</a>
-							<p class="article-info">17-08-2023</p>
-						</div>
-					</article>
-
-					<!-- TikTok featured -->
-					<article class="article-featured tiktok-featured">
-						<div class="article-featured-main">
-							<h2 class="article-caption"
-								>No one can stop this guy</h2
-							>
-							<a href="#" class="article-see-more">see more</a>
-						</div>
-						<div class="article-featured-secondary">
-							<a href="#" class="article-see-more">
-								<div class="video-content-image">
-									<img
-										src="images/no-one-can-stop-this-guy.png"
-										alt="A korean movie scene where the protagonist fights viciously against enemies"
-										class="article-image" />
-									<img
-										src="images/play-icon.png"
-										alt="video play icon."
-										class="video-play-icon" />
-								</div>
-							</a>
-							<p class="article-info">23-12-2022</p>
-						</div>
-					</article>
-				</section>
-
+			<main role="main" class="recent-posts">
 				<!-- Recent Facebook posts -->
+				<h1 class="article-section-heading">
+					<span>Recent facebook posts</span>
+				</h1>
 				<section class="recent-facebook-posts">
-					<h1 class="article-section-heading"
-						>Recent facebook posts</h1
-					>
 					<article class="article-recent">
 						<div class="article-recent-main">
 							<h2 class="article-caption"
@@ -169,12 +121,33 @@
 							<p class="article-info">19-09-2023</p>
 						</div>
 					</article>
+
+					<article class="article-recent">
+						<div class="article-recent-main">
+							<h2 class="article-caption"
+								>Top action movies coming out in 2024</h2
+							>
+							<a href="#" class="article-see-more">see more</a>
+						</div>
+						<div class="article-recent-secondary">
+							<a href="#" class="article-see-more">
+								<div class="article-image-container">
+									<img
+										src="images/top-action-movies.png"
+										alt="image of top coming action movies in 2024"
+										class="article-image" />
+								</div>
+							</a>
+							<p class="article-info">17-08-2023</p>
+						</div>
+					</article>
 				</section>
 
 				<!-- Recent TikTok posts -->
+				<h1 class="article-section-heading">
+					<span>Recent TikTok posts</span>
+				</h1>
 				<section class="recent-tiktok-posts">
-					<h1 class="article-section-heading">Recent TikTok posts</h1>
-
 					<article class="article-recent">
 						<div class="article-recent-main">
 							<h2 class="article-caption"
@@ -251,127 +224,33 @@
 							<p class="article-info">24-09-2023</p>
 						</div>
 					</article>
-				</section>
-			</main>
 
-			<aside role="complementary" class="sidebar">
-				<!-- Facebook widgets -->
-				<section class="facebook-widgets sidebar-widget">
-					<h2 class="widget-title">
-						<a href="#" class="article-see-more"
-							>See more Facebook posts</a
-						>
-					</h2>
-
-					<div class="widget-recent-post">
-						<h3 class="widget-recent-post-title">
-							Black Superman X joker
-							<br />
-							Edit by
-							<a
-								href="https://www.facebook.com/permalink.php?story_fbid=pfbid0a6ABjG7uHQ5byNHF4Fb6PcacMdfnbhwJjC9DnnHn49PjnbRWg6Ry2kKnfJgoAn7Fl&id=100083441048616"
-								class="external-link"
-								>sync kingsley</a
+					<article class="article-recent">
+						<div class="article-recent-main">
+							<h2 class="article-caption"
+								>No one can stop this guy</h2
 							>
-						</h3>
-						<a href="#" class="article-see-more">
-							<img
-								src="images/super-man-vs-joker.png"
-								alt="image of The Joker and Superman both in black suit"
-								class="widget-image" />
-						</a>
-					</div>
-
-					<div class="widget-recent-post">
-						<h3 class="widget-recent-post-title">
-							Black Adam ⚡
-							<br />
-							Edit by
-							<a
-								href="https://www.facebook.com/permalink.php?story_fbid=pfbid026bug5VbjWc8Ai4V6g1TYUgVgAGF3JhDu1PyEVVJodD8DwTBWEb4gWrkTWifxPn6Xl&id=100083441048616"
-								class="external-link"
-								>sync kingsley</a
-							>
-						</h3>
-						<a href="#" class="article-see-more">
-							<img
-								src="https://scontent.fabb1-1.fna.fbcdn.net/v/t39.30808-6/380364280_287354074055959_4028333230864206565_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeGugKJS9tLW1HYdn4hiyuvaT5PF12Ro-CtPk8XXZGj4Kw7jI_Xb_vmLil0xvPmuLtY_kDOOZiX2hUFfQePSxlRX&_nc_ohc=1g3xopT8HzoAX-VIojY&_nc_zt=23&_nc_ht=scontent.fabb1-1.fna&oh=00_AfBBdSH7YiBLtviJ8WCfNK5KNs9qytWd7vJ_NXhjH33JGA&oe=651C146D"
-								alt="image of Black Adam holding Thor's hammer"
-								class="widget-image" />
-						</a>
-					</div>
-
-					<div class="widget-recent-post">
-						<h3 class="widget-recent-post-title">Coming ❤️</h3>
-						<a href="#" class="article-see-more">
-							<img
-								src="https://scontent.fabb1-1.fna.fbcdn.net/v/t39.30808-6/379983575_286874214103945_1007944295147878995_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5614bc&_nc_eui2=AeFB2gEQZSGQzT2vhinv2thlBSVdmYVr7ukFJV2ZhWvu6fyPpY6tenoi0vXWbiy_nCiH3ZYmh9D5yf3BvSPtEX-T&_nc_ohc=w-gEOqRK-mcAX_rlW8z&_nc_zt=23&_nc_ht=scontent.fabb1-1.fna&oh=00_AfCZYYd9cJk99XAHIijxoP0FhzSolhp_syETb6ZT8E8KBA&oe=651B35DC"
-								alt="image of Marvel's Secret Empire new Avengers movie flyer"
-								class="widget-image" />
-						</a>
-					</div>
+							<a href="#" class="article-see-more">see more</a>
+						</div>
+						<div class="article-recent-secondary">
+							<a href="#" class="article-see-more">
+								<div class="video-content-image">
+									<img
+										src="images/no-one-can-stop-this-guy.png"
+										alt="A korean movie scene where the protagonist fights viciously against enemies"
+										class="article-image" />
+									<img
+										src="images/play-icon.png"
+										alt="video play icon."
+										class="video-play-icon" />
+								</div>
+							</a>
+							<p class="article-info">23-12-2022</p>
+						</div>
+					</article>
 				</section>
-
-				<!-- TikTok widgets -->
-				<section class="tiktok-widgets sidebar-widget">
-					<h2 class="widget-title">
-						<a href="#" class="article-see-more"
-							>See more TikTok posts</a
-						>
-					</h2>
-
-					<div class="widget-recent-post">
-						<h3 class="widget-recent-post-title">Part 2</h3>
-						<a href="#" class="article-see-more">
-							<div class="video-content-image">
-								<img
-									src="images/part-2.png"
-									alt="image of a person wearing a black mask"
-									class="widget-image" />
-								<img
-									src="images/play-icon.png"
-									alt="image of video play icon"
-									class="video-play-icon" />
-							</div>
-						</a>
-					</div>
-
-					<div class="widget-recent-post">
-						<h3 class="widget-recent-post-title">Movie clip</h3>
-						<a href="#" class="article-see-more">
-							<div class="video-content-image">
-								<img
-									src="images/movie-clip02.png"
-									alt="image of MJ Spiderman's girlfriend looking down, whilst being in the midst of a crowd"
-									class="widget-image" />
-								<img
-									src="images/play-icon.png"
-									class="video-play-icon"
-									alt="image of video play icon" />
-							</div>
-						</a>
-					</div>
-
-					<div class="widget-recent-post">
-						<h3 class="widget-recent-post-title"
-							>soldier code [fear no one ☠️]</h3
-						>
-						<a href="#" class="article-see-more">
-							<div class="video-content-image">
-								<img
-									src="images/soldier-code.png"
-									alt="image of the three varieties of Spiderman in Venom suit"
-									class="widget-image" />
-								<img
-									src="images/play-icon.png"
-									class="video-play-icon"
-									alt="image of video play icon" />
-							</div>
-						</a>
-					</div>
-				</section>
-			</aside>
-		</div>
+			</main></div
+		>
 
 		<footer class="site-footer">
 			<p class="copyright">
@@ -379,5 +258,5 @@
 				<span>&copy; Copyright 2023</span>
 			</p>
 		</footer>
-	</body>
-</html>
+	</body></html
+>
