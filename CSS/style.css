@@ -72,6 +72,13 @@ span {
 	line-height: 0.8;
 }
 
+.featured-articles {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin: 3em auto 0 auto;
+}
+
 .article-featured:first-child,
 .article-recent:nth-child(2) {
 	margin: 0 0 1.2em 0;
@@ -225,7 +232,7 @@ span {
 	flex-wrap: wrap;
 }
 
-.recent-posts .article-recent {
+main.recent-posts .article-recent {
 	flex: 1 1 calc(100% / 6);
 	margin: 1em 1em 0 1em;
 	/* width: calc(100% / 3); */
@@ -370,7 +377,7 @@ span {
 
 @media (min-width: 600px) {
 	/* Layout */
-	.container-flex:nth-child(2) {
+	.container-flex:nth-child(3) {
 		flex-direction: row;
 		position: relative;
 	}
@@ -380,16 +387,29 @@ span {
 		flex-basis: 80%;
 	}
 
+	.featured-articles {
+		flex-direction: row;
+	}
+
 	.article-featured {
-		position: relative;
-		left: 1.51%;
-		width: 150%;
-		max-width: 690px;
-		margin: auto;
+		flex: 1;
+	}
+
+	.facebook-featured {
+		margin: 0 1em 0 0;
+	}
+
+	.tiktok-featured {
+		margin: 0 0 0 1em;
+	}
+
+	.article-featured:last-child {
+		padding-bottom: 0;
+		border-bottom: none;
 	}
 
 	.article-recent {
-		max-width: 520px;
+		/* max-width: 520px; */
 	}
 
 	.recent-tiktok-posts .article-recent:last-child {
@@ -402,7 +422,7 @@ span {
 		flex-shrink: 1;
 		flex-grow: 0;
 		flex-basis: 30%;
-		margin-left: 10%;
+		/* margin-left: 10%; */
 		position: relative;
 	}
 
@@ -411,11 +431,15 @@ span {
 	}
 
 	.facebook-widgets {
-		top: 32.75%;
+		margin: 0;
+		top: 2.45%;
+		left: 20%;
 	}
 
 	.tiktok-widgets {
-		top: 73.5%;
+		margin: 0;
+		top: 62.2%;
+		left: 20%;
 		margin: 0;
 	}
 
@@ -423,11 +447,15 @@ span {
 		padding: 0.2em;
 	}
 
+	.widget-recent-post:nth-child(2) {
+		margin: 0.5em 0 1.2em 0;
+	}
+
 	/* Typography */
 
 	.sidebar-widget .widget-title {
 		margin: 0 auto 0.3em auto;
-		font-size: 0.4em;
+		font-size: 0.38em;
 	}
 
 	.widget-recent-post-title {
@@ -449,11 +477,11 @@ span {
 	/* Layout */
 
 	.facebook-widgets {
-		top: 32%;
+		/* top: 32%; */
 	}
 
 	.tiktok-widgets {
-		top: 74.35%;
+		/* top: 74.35%; */
 		margin: 0;
 	}
 
@@ -473,8 +501,30 @@ span {
 }
 
 @media (min-width: 800px) {
-	.article-featured {
-		left: 50%;
-		transform: translateX(-28.5%);
+	.recent-facebook-posts,
+	.recent-tiktok-posts {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.container .article-recent {
+		flex: 1 1 40%;
+		margin: 1em 0.5em 0 0.5em;
+	}
+
+	.article-recent:last-child {
+		max-width: 47%;
+	}
+
+	.sidebar {
+		max-width: 192px;
+	}
+
+	.sidebar-widget .widget-title {
+		font-size: 0.3em;
+	}
+
+	.facebook-widgets {
+		top: 6%;
 	}
 }
