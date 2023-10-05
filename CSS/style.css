@@ -1,8 +1,13 @@
 /** @format */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:wght@700&family=Merriweather:wght@900&family=Roboto:ital,wght@0,500;1,500&family=Ubuntu:wght@300;400;700&display=swap");
 body {
+	background-color: #2d3ac3;
 	font-family: "Libre Baskerville", serif;
 	margin: 0;
+}
+
+#about-me {
+	color: white;
 }
 
 .site-header {
@@ -21,6 +26,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	clear: both;
 }
 
 img {
@@ -88,7 +94,7 @@ span {
 .recent-tiktok-posts .article-recent:last-child {
 	height: fit-content;
 	padding-bottom: 25%;
-	border-bottom: 2px solid #24053e;
+	border-bottom: 2px solid #fff;
 }
 
 .recent-posts .recent-tiktok-posts .article-recent:last-child {
@@ -202,10 +208,18 @@ span {
 		align-items: flex-start;
 	}
 
+	#about-me .sidebar {
+		flex-direction: column;
+	}
+
 	.sidebar-widget {
 		width: auto;
 		flex-grow: 1;
 		margin-top: 0;
+	}
+
+	#about-me .sidebar-widget {
+		margin: 0 auto;
 	}
 
 	.facebook-widgets {
@@ -230,12 +244,17 @@ span {
 .recent-posts .recent-tiktok-posts {
 	display: flex;
 	flex-wrap: wrap;
+	gap: 2em 0.8em;
 }
 
 main.recent-posts .article-recent {
-	flex: 1 1 calc(100% / 6);
-	margin: 1em 1em 0 1em;
-	/* width: calc(100% / 3); */
+	flex: 1 1 calc(32%);
+	margin: 0;
+	/* margin: 1em 1em 0 1em; */
+}
+
+main.recent-posts .article-recent:nth-last-child(-n + 2) {
+	max-width: calc(32%);
 }
 
 /* Typograpghy */
@@ -287,6 +306,13 @@ main.recent-posts .article-recent {
 	margin: 20% 0 0.3em 0;
 }
 
+.article-section-heading {
+	color: white;
+	border-bottom: 0.1em solid #24053e;
+	width: fit-content;
+	margin: 2.5em 0 0.3em 0;
+}
+
 .recent-posts .article-section-heading {
 	margin: 2em 0 0.3em 0;
 	text-align: center;
@@ -324,7 +350,26 @@ main.recent-posts .article-recent {
 .copyright {
 	margin: 0;
 	text-align: center;
+
 	/* padding: 2em; */
+}
+
+.copyright span:first-child {
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 1.5em;
+}
+
+#about-me main {
+	background: linear-gradient(#24053e 80%, #2f46e0);
+	padding: 1.5em;
+	max-width: 551px;
+	min-width: 247.5px;
+}
+
+#about-me main h1 {
+	margin-top: 0;
+	border-bottom: 2px solid #43ffa1;
+	width: fit-content;
 }
 
 /* Site Navigation */
@@ -363,6 +408,33 @@ main.recent-posts .article-recent {
 
 .site-title-container a {
 	text-decoration: none;
+}
+
+#about-me .button {
+	/* display: inline-block; */
+
+	color: #24053e;
+	padding: 0.3em 0.5em;
+	/* border-radius: 5px; */
+	font-family: "Ubuntu", sans-serif;
+	font-weight: bolder;
+	text-transform: lowercase;
+	margin: 0.3em;
+}
+
+.icon,
+.button span {
+	vertical-align: middle;
+}
+
+.button span {
+	background-color: #43ffa1;
+	padding: 0.1em 0.3em;
+	border-radius: 5px;
+}
+
+.icon {
+	width: 1.5em;
 }
 
 .current-page,
@@ -426,8 +498,34 @@ main.recent-posts .article-recent {
 		position: relative;
 	}
 
+	#about-me .sidebar {
+		flex-direction: row;
+		gap: 0 10%;
+		margin: 4em auto 0 auto;
+		position: static;
+	}
+
+	#about-me .widget-title {
+		position: absolute;
+		top: 83%;
+		z-index: 1;
+		font-size: 0.8em;
+	}
+
+	#about-me .facebook-widget-title {
+		left: 13.5%;
+	}
+
+	#about-me .tiktok-widget-title {
+		left: 65%;
+	}
+
 	.sidebar-widget {
 		position: absolute;
+	}
+
+	#about-me .sidebar-widget {
+		position: static;
 	}
 
 	.facebook-widgets {
@@ -445,6 +543,10 @@ main.recent-posts .article-recent {
 
 	.widget-recent-post {
 		padding: 0.2em;
+	}
+
+	#about-me .widget-recent-post {
+		background: linear-gradient(#24053e 92%, #2f46e0);
 	}
 
 	.widget-recent-post:nth-child(2) {
@@ -512,16 +614,41 @@ main.recent-posts .article-recent {
 		margin: 1em 0.5em 0 0.5em;
 	}
 
-	.article-recent:last-child {
-		max-width: 47%;
-	}
-
 	.sidebar {
 		max-width: 192px;
 	}
 
+	#about-me .sidebar {
+		flex-direction: column;
+		max-width: none;
+		margin: 3em auto 0 auto;
+	}
+
+	#about-me .widget-title {
+		position: static;
+		margin: 5em auto 0.3em auto;
+		font-size: 1em;
+	}
+
+	#about-me .sidebar-widget {
+		display: flex;
+		align-items: flex-start;
+		gap: 1em;
+		margin: 0.5em auto;
+		width: 100%;
+	}
+
+	#about-me .widget-recent-post {
+		flex: 1;
+		margin: 0;
+	}
+
+	#about-me p {
+		font-family: "Roboto", sans-serif;
+	}
+
 	.sidebar-widget .widget-title {
-		font-size: 0.3em;
+		font-size: 0.2em;
 	}
 
 	.facebook-widgets {
