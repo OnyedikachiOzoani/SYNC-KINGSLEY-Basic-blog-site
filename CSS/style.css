@@ -41,7 +41,7 @@ span {
 
 .container {
 	width: 90%;
-	max-width: 1000px;
+	max-width: 1500px;
 	margin: auto;
 }
 
@@ -201,6 +201,10 @@ span {
 	width: 65%;
 }
 
+.flex-fill {
+	height: 0em;
+}
+
 @media (min-width: 400px) {
 	/* Layout */
 	.sidebar {
@@ -254,7 +258,7 @@ main.recent-posts .article-recent {
 }
 
 main.recent-posts .article-recent:nth-last-child(-n + 2) {
-	max-width: calc(32%);
+	/* max-width: calc(32%); */
 }
 
 /* Typograpghy */
@@ -354,9 +358,16 @@ main.recent-posts .article-recent:nth-last-child(-n + 2) {
 	/* padding: 2em; */
 }
 
-.copyright span:first-child {
+.copyright a {
 	font-family: "Bebas Neue", sans-serif;
 	font-size: 1.5em;
+	text-decoration: none;
+	color: white;
+}
+
+.copyright a:hover,
+.copyright a:focus {
+	color: #43ffa1;
 }
 
 #about-me main {
@@ -577,6 +588,10 @@ main.recent-posts .article-recent:nth-last-child(-n + 2) {
 
 @media (min-width: 700px) {
 	/* Layout */
+
+	#about-me .widget-title {
+		top: 80%;
+	}
 
 	.facebook-widgets {
 		/* top: 32%; */
