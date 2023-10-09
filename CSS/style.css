@@ -670,3 +670,131 @@ main.recent-posts .article-recent:nth-last-child(-n + 2) {
 		top: 6%;
 	}
 }
+
+/* Animations */
+
+/* For the landing page */
+
+.site-header {
+	animation-name: fadein;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+}
+
+.site-logo-image-container {
+	animation-name: fadein;
+	animation-duration: 2.5s;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: 2;
+}
+
+.article-featured {
+	animation-name: slideup;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1.5s;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+	overflow: hidden;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 20%;
+	}
+
+	to {
+		opacity: 100%;
+	}
+}
+
+@keyframes slideup {
+	from {
+		opacity: 0%;
+		margin-top: 15em;
+		white-space: nowrap;
+	}
+
+	75% {
+		opacity: 50%;
+	}
+
+	to {
+		opacity: 100%;
+		margin-top: 0;
+		white-space: normal;
+	}
+}
+
+/* For the About me page */
+
+#about-me main {
+	animation-name: slidein;
+	animation-timing-function: ease-in-out;
+	animation-duration: 3s;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+	overflow: hidden;
+}
+
+#about-me .widget-recent-post {
+	animation-name: growin;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2.5s;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		white-space: nowrap;
+		opacity: 0%;
+	}
+
+	50% {
+		opacity: 100%;
+	}
+
+	90% {
+		white-space: nowrap;
+	}
+
+	to {
+		margin-left: 0;
+		white-space: normal;
+	}
+}
+
+@keyframes growin {
+	from {
+		margin-left: 30%;
+		font-size: 7.51px;
+	}
+
+	to {
+		margin-left: 0;
+		font-size: revert;
+	}
+}
+
+/* For Recent posts page */
+
+.recent-posts {
+	animation-name: recent-posts-growin;
+	animation-timing-function: ease-in-out;
+	animation-duration: 2.5s;
+	animation-direction: normal;
+	animation-iteration-count: 1;
+}
+
+@keyframes recent-posts-growin {
+	from {
+		margin-left: 23%;
+	}
+
+	to {
+		margin-left: 0;
+	}
+}
